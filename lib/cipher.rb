@@ -31,7 +31,7 @@ def caesar_cipher(string, num)
     string.each_char do |char|
         encoded_string << convert_char(char,num)
     end
-    [string,encoded_string]
+    encoded_string
 end
 
 def caesar_decipher(encoded_string, num)
@@ -41,9 +41,3 @@ def caesar_decipher(encoded_string, num)
     end
     [encoded_string,decoded_string]
 end
-
-test_string = 'The quick, brown fox jumped over the lazy dog!'
-
-puts caesar_cipher(test_string, 9)
-
-puts caesar_decipher(caesar_cipher(test_string,9)[1], 9)
